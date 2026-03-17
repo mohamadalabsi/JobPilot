@@ -1,15 +1,17 @@
-import { Briefcase } from "lucide-react";
+import { Briefcase, Plane, PlaneTakeoff } from "lucide-react";
 import Link from "next/link";
 import { Button } from "./ui/button";
 
+//  a bit different form blain react
 export default function Navbar() {  
   // use client components when it is necessary to use state or effects, like onclick on buttons or useState 
     return (
     <nav className="border-b border-gray-200 bg-white">
       <div className=" flex h-16 items-center px-4 justify-between w-full">
-          <Link href="/" className="flex items-center gap-2 text-xl font-semibold text-primary">
+          <Link href="/" className="flex items-center gap-2 text-xl font-semibold text-primary"> 
+          {/* here we can change the color of the icon and the text from the link  */}
           <Briefcase  />
-          Job Tracker
+          JobPilot
           </Link>
 
             <div className="flex items-center gap-4">
