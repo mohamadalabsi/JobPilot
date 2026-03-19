@@ -13,8 +13,8 @@ import { useState } from "react";
 
 export default function Signin() {
 
+  // same as the sign up page 
 
-   const [name, setName] = useState("");
    const [email, setEmail] = useState("");
    const [password, setPassword] = useState("");
   //  if there is an error we will display it and if the form is submitting we will disable the button and show a loading state

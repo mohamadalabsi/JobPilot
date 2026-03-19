@@ -1,3 +1,4 @@
+// ! this is the client side version of the auth file
 // now this will be used for login and signup but both are client components so we have to create this , so we cant use auth.ts because it is for server side stuff 
 
 import { createAuthClient } from "better-auth/react";
