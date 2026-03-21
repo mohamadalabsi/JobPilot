@@ -10,7 +10,7 @@ export default function SignOutButton() {
   const router = useRouter();
 
   return (
-    <DropdownMenuItem
+    <DropdownMenuItem  className="flex flex-col space-y-1  hover:bg-primary/90"
       onClick={async () => {
         const result = await signOut();
         if (result.data) {
