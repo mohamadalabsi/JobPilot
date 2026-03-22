@@ -110,7 +110,7 @@ export default function Signin() {
           <CardFooter className="flex flex-col space-y-4">
             <Button
               type="submit"
-              className="w-full bg-primary hover:bg-primary/90"
+              className="w-full bg-primary hover:bg-primary/90 hover:cursor-pointer"
               disabled={loading} // disable the button when the form is submitting
                
             >

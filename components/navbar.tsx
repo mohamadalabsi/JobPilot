@@ -40,29 +40,36 @@ export default  function Navbar() {
               <Link href="/dashboard">
                 <Button
                   variant="ghost"
-                  className="text-gray-700 hover:text-black"
+                  className="text-gray-700 hover:text-black hover:cursor-pointer"
                 >
                   Dashboard
                 </Button>
               </Link>
               <DropdownMenu>
-                <DropdownMenuTrigger asChild>
-                  <Button size="icon-sm" className=" bg-primary text-white">
-                    {session.user.name[0].toUpperCase()}
+                <DropdownMenuTrigger  asChild>
+                  <Button
+                    variant="ghost"
+                    className="relative h-8 w-8 rounded-full hover:cursor-pointer"
+                  >
+                    <Avatar className="h-8 w-8">
+                      <AvatarFallback className="bg-primary text-white">
+                        {session.user.name[0].toUpperCase()}
+                      </AvatarFallback>
+                    </Avatar>
                   </Button>
                 </DropdownMenuTrigger>
 
-                <DropdownMenuContent className= "bg-white w-56" align="end">
+                <DropdownMenuContent className="w-56" align="end">
                   <DropdownMenuLabel className="font-normal">
-                    <div className="flex flex-col space-y-2 px-3 py-3">
-                      <p className="text-md font-medium leading-none text-black">
+                    <div className="flex flex-col space-y-1">
+                      <p className="text-sm font-medium leading-none text-black">
                         {session.user.name}
                       </p>
-                      <p className="text-sm leading-none text-muted-foreground">
+                      <p className="text-xs leading-none text-muted-foreground">
                         {session.user.email}
                       </p>
                     </div>
-                  </DropdownMenuLabel >
+                  </DropdownMenuLabel>
                   <SignOutButton />
                 </DropdownMenuContent>
               </DropdownMenu>
@@ -72,13 +79,13 @@ export default  function Navbar() {
               <Link href="/sign-in">
                 <Button
                   variant="ghost"
-                  className="text-gray-700 hover:text-black"
+                  className="text-gray-700 hover:text-black hover:cursor-pointer"
                 >
                   Log In
                 </Button>
               </Link>
               <Link href="/sign-up">
-                <Button className="bg-primary hover:bg-primary/90">
+                <Button className="bg-primary hover:bg-primary/90 hover:cursor-pointer">
                   Start for free
                 </Button>
               </Link>

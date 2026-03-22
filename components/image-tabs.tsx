@@ -16,7 +16,7 @@ export default function ImageTabs() {
           <div className="flex gap-2 justify-center mb-8">
             <Button
               onClick={() => setActiveTab("organize")}
-              className={`rounded-lg px-6 py-3 text-sm font-medium transition-colors ${
+              className={`rounded-lg px-6 py-3 text-sm font-medium transition-colors hover:cursor-pointer ${
                 activeTab === "organize"
                   ? "bg-primary text-white"
                   : "bg-gray-100 text-gray-700 hover:bg-gray-200"
@@ -26,7 +26,7 @@ export default function ImageTabs() {
             </Button>
             <Button
               onClick={() => setActiveTab("hired")}
-              className={`rounded-lg px-6 py-3 text-sm font-medium transition-colors ${
+              className={`rounded-lg px-6 py-3 text-sm font-medium transition-colors hover:cursor-pointer ${
                 activeTab === "hired"
                   ? "bg-primary text-white"
                   : "bg-gray-100 text-gray-700 hover:bg-gray-200"
@@ -36,7 +36,7 @@ export default function ImageTabs() {
             </Button>
             <Button
               onClick={() => setActiveTab("boards")}
-              className={`rounded-lg px-6 py-3 text-sm font-medium transition-colors ${
+              className={`rounded-lg px-6 py-3 text-sm font-medium transition-colors hover:cursor-pointer ${
                 activeTab === "boards"
                   ? "bg-primary text-white"
                   : "bg-gray-100 text-gray-700 hover:bg-gray-200"

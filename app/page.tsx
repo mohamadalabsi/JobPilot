@@ -12,7 +12,7 @@ export default function Home() {
       {/* /now adding the main part  */}
          <main className=" flex-1 ">
           {/* hero section */}
-          <section  className="container  px-4 py-32">
+          <section  className="  px-4 py-32">
             <div className="mx-auto max-w-4xl text-center">
               <h1 className="text-black mb-6 text-6xl font-bold">
                 A Better way to track your job application.
@@ -24,7 +24,7 @@ export default function Home() {
                 <div className="flex flex-col items-center gap-4">
                   {/* now here we have a button we can make a component and reuse multiple time as usual but i will use shadcn  to install custom made components it will be created in components folder , run npx i shadcn@latest add button and then import it */}
                   <Link href="/sign-up">
-               <Button size="lg" className="h-12 px-8 text-lg font-medium " >
+               <Button size="lg" className="h-12 px-8 text-lg font-medium hover:cursor-pointer" >
                 Start for free
                 {/* i want to install icon library , run npm i lucide-react */}
                 <ArrowRight className="ml-2 " />
