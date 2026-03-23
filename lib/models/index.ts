@@ -7,4 +7,4 @@ export { default as Board } from "./board";
 export { default as Column } from "./column";
 export { default as JobApplication } from "./job-application";
 
-// this will export all different models we have created 
+// this will export all different models we have created , we could do it in each file but here is better 

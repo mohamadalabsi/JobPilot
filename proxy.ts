@@ -7,9 +7,10 @@ import { getSession } from "./lib/auth/auth";
 
 export default async function proxy(request : NextRequest) {
 
+     const session = await getSession();
+
   //  it is in the dashboard page
   // const isDashboardPage = request.nextUrl.pathname.startsWith("/dashboard"); //detect if the user in the dashboard page or not 
-   const session = await getSession();
   //  if (isDashboardPage && !session?.user) {
   //   return NextResponse.redirect(new URL("/sign-in", request.url));
   // }

@@ -17,7 +17,7 @@ const DEFAULT_COLUMNS = [
 
 export async function initializeUserBoard(userId: string) {
   try {
-    // fist connect to the database
+    // fist connect to the database and create the models and populate thge one we need to create the default board for the user
     await connectDB();
 
     // now interacting with the models we created and with our tables 

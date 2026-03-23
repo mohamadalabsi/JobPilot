@@ -1,5 +1,6 @@
 import mongoose, { Schema, Document } from "mongoose";
 
+//! we are using here mongose types 
 export interface IBoard extends Document {
   // define the field and their types we want to include in the document
   name: string;

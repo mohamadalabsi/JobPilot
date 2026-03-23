@@ -22,6 +22,19 @@ export const auth = betterAuth({
     client
     
   }) , 
+
+    // this will cache the session in a cookie for faster access and to avoid making a request to the database every time we want to get the session , see the dashboard page 
+  session: {
+    cookieCache: {
+      enabled: true, 
+      maxAge: 60 * 60 ,
+    },
+      
+    },
+    
+
+
+
   // specify what type of authentication we want to use  , we will use email and password authentication , so we need to specify that in the options , see the documentation for better-auth for more details about the options we can use
   emailAndPassword: { 
     enabled: true, 
@@ -41,7 +54,7 @@ export const auth = betterAuth({
 }   
 );
 
-//!  now if we for example signup a user better auth will create the db for us 
+//!  now if we for example signup a user better auth will create the db for us includes the user and session
 
 //! now we have to detect if the user is authenticated or not using sessions and we use it in the navebar and because navbar is a server component we do it here using a function that we will use on or app a lot in server components 
 
