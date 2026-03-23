@@ -6,14 +6,23 @@ import { MongoClient } from "mongodb";
 import { redirect } from "next/navigation";
 import { headers } from "next/headers";
 import { initializeUserBoard } from "../init-user-board";
+import connectDB from "../db";
 
 
 // we will be using this to do anything related to authentication in our app, like signing up , signing in , signing out and also to protect routes and pages that require authentication
 
 //  with better auth they do not store the information about the user but they give us the tools to do that , we have to setup out database , in this case mongodb 
 
-const client=new MongoClient(process.env.MONGODB_URI!); // create a new mongodb client instance(object) using the connection string from the env vars
-const db=client.db(); // get the default database from the connection string
+//! const client=new MongoClient(process.env.MONGODB_URI!); // create a new mongodb client instance(object) using the connection string from the env vars
+//! const db=client.db(); // get the default database from the connection string
+
+//!  so now here above and in db.ts we connected to the db twice , it is better in production to connect to the database once inside one single place
+
+const mongooseInstance = await connectDB(); 
+const client = mongooseInstance.connection.getClient(); 
+const db = client.db();
+
+
 
 export const auth = betterAuth({
  
